@@ -15,10 +15,10 @@ import Navbar from "./components/Navbar";
 import "./App.css";
 import { NewLogin } from "./routes/NewLogin/NewLogin";
 import Logut from "./routes/Logut";
+import { Contact } from "./Contact/Contact";
 
 const AppLayout = () => (
   <>
-    <Navbar />
     <Outlet />
   </>
 );
@@ -28,9 +28,9 @@ const router = createBrowserRouter(
     <Route element={<AppLayout />}>
       <Route path="/" element={<NewLogin />} />
       <Route path="/products" element={<Products />} />
-      <Route path="/reports" element={<Reports />} />
-      <Route path="/Home" element={<Home />} />
-      <Route path="/Logout" element={<Logut />} />
+      <Route path="/reports" element={<Contact />} />
+      <Route path="/Home" element={<Reports />} />
+      <Route path="/User" element={<Logut />} />
     </Route>
   )
 );

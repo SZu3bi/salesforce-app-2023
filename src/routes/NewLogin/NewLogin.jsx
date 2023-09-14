@@ -9,6 +9,7 @@ import "react-toastify/dist/ReactToastify.min.css";
 import { GetData, LoginUser } from "../../Services/APIServices_2";
 import { useLocation } from "react-router-dom";
 import { Button } from "@material-ui/core";
+import Navbar from "../../components/Navbar";
 
 export const NewLogin = () => {
 
@@ -38,7 +39,7 @@ export const NewLogin = () => {
     e.preventDefault();
     axios
       .post(
-        `${configlogin.server_address}?grant_type=${configlogin.RESPONSE_TYPE}&client_id=${configlogin.CLIENT_ID}&client_secret=${configlogin.client_Secret}&username=${states.username}&password=${states.password}bcLjGkX1B65o0gRxdH2L4FLC8`
+        `${configlogin.server_address}?grant_type=${configlogin.RESPONSE_TYPE}&client_id=${configlogin.CLIENT_ID}&client_secret=${configlogin.client_Secret}&username=${states.username}&password=${states.password}ABtN63LfgzgioXK9tYqG7WlCq`
       )
       .then((response) => {
         setcheck(response.status);
@@ -49,7 +50,7 @@ export const NewLogin = () => {
         setShow(true);
 
         setTimeout(() => {
-          h.pathname ="/products";
+          h.pathname ="/Home";
           window.location.replace(h.pathname);
         }, 400);
         showSuccess("Login Successfully");
@@ -72,6 +73,8 @@ export const NewLogin = () => {
   }, [tokenapi]);
 
   return (
+    <div>
+
     <div style={{ display: "flex", justifyContent: "center", marginTop: "5%" }}>
   <div>
       <ToastContainer />
@@ -123,6 +126,7 @@ export const NewLogin = () => {
       </div>
  
       
+    </div>
     </div>
   );
 };

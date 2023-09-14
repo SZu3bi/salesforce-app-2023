@@ -19,16 +19,16 @@ import Checkbox from "@mui/material/Checkbox";
 const useStyles = makeStyles((theme) => ({
   root: {
     "& .MuiTextField-root": {
-      margin: theme.spacing(1),
-      width: "25ch",
+      margin: theme.spacing(2),
+      width: "30ch",
     },
-    display: "flex",
+    // display: "flex",
     flexWrap: "wrap",
   },
   textField: {
-    marginLeft: theme.spacing(1),
-    margin: theme.spacing(1),
-    width: "25ch",
+    marginLeft: theme.spacing(2),
+    margin: theme.spacing(2),
+    width: "30ch",
   },
 }));
 
